@@ -1,5 +1,6 @@
-body {
+.container {
     background-image: url('../img/splash.png');
     background-size: cover;
     background-position: bottom right;
+    background-repeat: no-repeat;
 }
