@@ -750,3 +750,21 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-04-16 02:23:23.858 HorseAttack[35410:791227] Resetting plugins due to page load.
 2015-04-16 02:23:23.972 HorseAttack[35410:791227] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/CBB6878B-EFCA-435E-847A-DE954C216BF4/HorseAttack.app/www/index.html
+2015-04-16 02:29:47.778 HorseAttack[35685:795325] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/966F4E2E-7B45-4DA3-9C6A-242163864261/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:29:47.870 HorseAttack[35685:795325] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:29:47.870 HorseAttack[35685:795325] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:29:47.872 HorseAttack[35685:795325] Unlimited access to network resources
+2015-04-16 02:29:47.900 HorseAttack[35685:795325] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:29:48.008 HorseAttack[35685:795325] Resetting plugins due to page load.
+2015-04-16 02:29:48.057 HorseAttack[35685:795325] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/03E956DF-629C-4581-81A6-182119EC6F2E/HorseAttack.app/www/index.html
+2015-04-16 02:30:24.200 HorseAttack[35685:795325] Resetting plugins due to page load.
+2015-04-16 02:30:24.245 HorseAttack[35685:795325] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/03E956DF-629C-4581-81A6-182119EC6F2E/HorseAttack.app/www/index.html
+2015-04-16 02:30:52.187 HorseAttack[35685:795325] Resetting plugins due to page load.
+2015-04-16 02:30:52.231 HorseAttack[35685:795325] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/03E956DF-629C-4581-81A6-182119EC6F2E/HorseAttack.app/www/index.html
