@@ -23,32 +23,47 @@ Horse.prototype.bindEvents = function() {
 }
 
 Horse.prototype.move = function() {
-  var that = this;
-  var moving = setTimeout(function() {
-    that.moveImmediately();
-  }, 1000);
-  that.$el.on('click', function() {
-    clearTimeout(moving);
+  var x = 0;
+  var y = 0;
+  var startingTimestamp;
+  var updateLocation = function() {
+
+  }
+
+  var moving = setTimeout(, )
+
+  requestAnimationFrame(function() {
+
   });
 }
 
-Horse.prototype.moveImmediately = function() {
-  var that = this;
-  var moving = setTimeout(function() {
-    var x = Math.random() * window.innerWidth / 10;
-    var y = Math.random() * window.innerHeight / 10;
+// Horse.prototype.move = function() {
+//   var that = this;
+//   var moving = setTimeout(function() {
+//     that.moveImmediately();
+//   }, 1000);
+//   that.$el.on('click', function() {
+//     clearTimeout(moving);
+//   });
+// }
 
-    console.log('moving...');
-    // something good here...
-    that.$el.animate({
-      left: x,
-      top: y
-    }, 1000);
-    // something good here...
+// Horse.prototype.moveImmediately = function() {
+//   var that = this;
+//   var moving = setTimeout(function() {
+//     var x = Math.random() * window.innerWidth;
+//     var y = Math.random() * window.innerHeight;
 
-    that.move();
-  }, 0);
-  that.$el.on('click', function() {
-    clearTimeout(moving);
-  });
-}
+//     console.log('moving...');
+//     // something good here...
+//     that.$el.animate({
+//       left: x,
+//       top: y
+//     }, 2000);
+//     // something good here...
+
+//     that.move();
+//   }, 0);
+//   that.$el.on('click', function() {
+//     clearTimeout(moving);
+//   });
+// }
