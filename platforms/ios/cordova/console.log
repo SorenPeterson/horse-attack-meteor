@@ -606,3 +606,91 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-04-16 02:03:00.460 HorseAttack[33491:779201] Resetting plugins due to page load.
 2015-04-16 02:03:00.507 HorseAttack[33491:779201] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/F02E03D7-029E-4D8D-8A82-A44609BD5121/HorseAttack.app/www/index.html
+2015-04-16 02:11:15.316 HorseAttack[34219:782906] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/B0DEB73F-61F0-4DBE-8A1A-F21C2088258A/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:11:15.399 HorseAttack[34219:782906] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:11:15.400 HorseAttack[34219:782906] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:11:15.401 HorseAttack[34219:782906] Unlimited access to network resources
+2015-04-16 02:11:15.450 HorseAttack[34219:782906] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:11:15.556 HorseAttack[34219:782906] Resetting plugins due to page load.
+2015-04-16 02:11:15.604 HorseAttack[34219:782906] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/423B429A-88BA-4AD6-983F-A12F85EB747E/HorseAttack.app/www/index.html
+2015-04-16 02:11:28.042 HorseAttack[34219:782906] Resetting plugins due to page load.
+2015-04-16 02:11:28.098 HorseAttack[34219:782906] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/423B429A-88BA-4AD6-983F-A12F85EB747E/HorseAttack.app/www/index.html
+2015-04-16 02:12:02.389 HorseAttack[34297:783619] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/ACB4E190-D9E0-474D-9FC0-1C84BDF09D7C/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:12:02.481 HorseAttack[34297:783619] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:12:02.481 HorseAttack[34297:783619] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:12:02.482 HorseAttack[34297:783619] Unlimited access to network resources
+2015-04-16 02:12:02.530 HorseAttack[34297:783619] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:12:02.636 HorseAttack[34297:783619] Resetting plugins due to page load.
+2015-04-16 02:12:02.686 HorseAttack[34297:783619] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/B2FDEF9C-CD48-4D92-9E54-EB9F24E4BC3B/HorseAttack.app/www/index.html
+2015-04-16 02:12:10.865 HorseAttack[34297:783619] Resetting plugins due to page load.
+2015-04-16 02:12:10.928 HorseAttack[34297:783619] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/B2FDEF9C-CD48-4D92-9E54-EB9F24E4BC3B/HorseAttack.app/www/index.html
+2015-04-16 02:12:34.544 HorseAttack[34393:784181] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/77BED818-89E8-49F8-A6CD-8C5B3CADB628/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:12:34.629 HorseAttack[34393:784181] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:12:34.629 HorseAttack[34393:784181] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:12:34.631 HorseAttack[34393:784181] Unlimited access to network resources
+2015-04-16 02:12:34.681 HorseAttack[34393:784181] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:12:34.788 HorseAttack[34393:784181] Resetting plugins due to page load.
+2015-04-16 02:12:34.838 HorseAttack[34393:784181] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/EDC2F316-A8A7-4CAE-A2D5-AAA74C4DFD0F/HorseAttack.app/www/index.html
+2015-04-16 02:13:24.142 HorseAttack[34514:784894] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/ABFC8A00-8F73-4EAF-B97A-F645F8AFB999/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:13:24.227 HorseAttack[34514:784894] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:13:24.227 HorseAttack[34514:784894] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:13:24.228 HorseAttack[34514:784894] Unlimited access to network resources
+2015-04-16 02:13:24.277 HorseAttack[34514:784894] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:13:24.377 HorseAttack[34514:784894] Resetting plugins due to page load.
+2015-04-16 02:13:24.424 HorseAttack[34514:784894] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/D7CE507E-2D4E-4286-993E-7A539FB699FC/HorseAttack.app/www/index.html
+2015-04-16 02:14:46.861 HorseAttack[34626:785895] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/63F4E7EB-5EA6-4C9A-9389-EF778893FBFE/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:14:46.952 HorseAttack[34626:785895] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:14:46.952 HorseAttack[34626:785895] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:14:46.954 HorseAttack[34626:785895] Unlimited access to network resources
+2015-04-16 02:14:46.999 HorseAttack[34626:785895] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:14:47.100 HorseAttack[34626:785895] Resetting plugins due to page load.
+2015-04-16 02:14:47.154 HorseAttack[34626:785895] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/05A77EB8-015A-4E1B-B05C-5A4FADB03A26/HorseAttack.app/www/index.html
+2015-04-16 02:15:16.551 HorseAttack[34698:786421] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/E540E7A4-A82F-47FE-97E8-91761CB9E21C/Library/Cookies/Cookies.binarycookies
+2015-04-16 02:15:16.635 HorseAttack[34698:786421] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 02:15:16.635 HorseAttack[34698:786421] Multi-tasking -> Device: YES, App: YES
+2015-04-16 02:15:16.637 HorseAttack[34698:786421] Unlimited access to network resources
+2015-04-16 02:15:16.687 HorseAttack[34698:786421] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 02:15:16.790 HorseAttack[34698:786421] Resetting plugins due to page load.
+2015-04-16 02:15:16.840 HorseAttack[34698:786421] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/37183ADA-D8DF-4141-8D65-FE9564372B64/HorseAttack.app/www/index.html
