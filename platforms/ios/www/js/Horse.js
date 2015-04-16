@@ -35,8 +35,8 @@ Horse.prototype.move = function() {
 Horse.prototype.moveImmediately = function() {
   var that = this;
   var moving = setTimeout(function() {
-    var x = Math.random() * window.innerWidth;
-    var y = Math.random() * window.innerHeight;
+    var x = Math.random() * window.innerWidth / 10;
+    var y = Math.random() * window.innerHeight / 10;
 
     console.log('moving...');
     // something good here...
