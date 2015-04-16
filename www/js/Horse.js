@@ -18,12 +18,21 @@ Horse.prototype.styling = function() {
 
 Horse.prototype.bindEvents = function() {
   this.$el.on('click', function() {
-    console.log('clicked');
   });
 }
 
 Horse.prototype.move = function() {
   var that = this;
+  var getLocation = (function() {
+    var x;
+    var y;
+    return function(timestamp) {
+      return {
+        x: ,
+        y:
+      }
+    }
+  })();
   var display = function(timestamp) {
     var x = Math.random() * window.innerWidth;
     var y = Math.random() * window.innerHeight;
