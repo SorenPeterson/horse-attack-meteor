@@ -6,7 +6,7 @@ Horse.prototype.render = function() {
   this.$el = $(new Image());
   this.styling();
   this.bindEvents();
-  this.moveImmediately();
+  this.move();
   return this;
 }
 
@@ -23,18 +23,16 @@ Horse.prototype.bindEvents = function() {
 }
 
 Horse.prototype.move = function() {
-  var x = 0;
-  var y = 0;
-  var startingTimestamp;
-  var updateLocation = function() {
-
+  var that = this;
+  var display = function(timestamp) {
+    var x = Math.random() * window.innerWidth;
+    var y = Math.random() * window.innerHeight;
+    that.$el.css('left', x);
+    that.$el.css('top', y);
+    requestAnimationFrame(display);
   }
 
-  var moving = setTimeout(, )
-
-  requestAnimationFrame(function() {
-
-  });
+  requestAnimationFrame(display);
 }
 
 // Horse.prototype.move = function() {
@@ -50,8 +48,6 @@ Horse.prototype.move = function() {
 // Horse.prototype.moveImmediately = function() {
 //   var that = this;
 //   var moving = setTimeout(function() {
-//     var x = Math.random() * window.innerWidth;
-//     var y = Math.random() * window.innerHeight;
 
 //     console.log('moving...');
 //     // something good here...
