@@ -17,29 +17,34 @@ Horse.prototype.styling = function() {
 }
 
 Horse.prototype.bindEvents = function() {
+  var that = this;
   this.$el.on('click', function() {
+    that.moving = false;
   });
 }
 
 Horse.prototype.move = function() {
   var that = this;
   that.moving = true;
-  // var getLocation = (function() {
-  //   var x;
-  //   var y;
-  //   return function(timestamp) {
-  //     return {
-  //       x: ,
-  //       y:
-  //     }
-  //   }
-  // })();
+
+  var nextx;
+  var nexty;
+  var previousx = Math.random() * window.innerWidth;
+  var previousy = Math.random() * window.innerHeight;
+
+  var getNewLocation = function() {
+    nextx = Math.random() * window.innerWidth;
+    nexty = Math.random() * window.innerHeight;
+    if(that.moving) {
+      setTimeout(getNewLocation, 1000);
+    }
+  }
+
+  getNewLocation();
 
   var display = function(timestamp) {
-    var x = Math.random() * window.innerWidth;
-    var y = Math.random() * window.innerHeight;
-    that.$el.css('left', x);
-    that.$el.css('top', y);
+    that.$el.css('left', nextx);
+    that.$el.css('top', nexty);
     if(that.moving) {
       requestAnimationFrame(display);
     }
@@ -47,6 +52,9 @@ Horse.prototype.move = function() {
 
   requestAnimationFrame(display);
 }
+
+Horse.prototype.getLocation = function() {
+};
 
 // Horse.prototype.move = function() {
 //   var that = this;
