@@ -23,22 +23,26 @@ Horse.prototype.bindEvents = function() {
 
 Horse.prototype.move = function() {
   var that = this;
-  var getLocation = (function() {
-    var x;
-    var y;
-    return function(timestamp) {
-      return {
-        x: ,
-        y:
-      }
-    }
-  })();
+  that.moving = true;
+  // var getLocation = (function() {
+  //   var x;
+  //   var y;
+  //   return function(timestamp) {
+  //     return {
+  //       x: ,
+  //       y:
+  //     }
+  //   }
+  // })();
+
   var display = function(timestamp) {
     var x = Math.random() * window.innerWidth;
     var y = Math.random() * window.innerHeight;
     that.$el.css('left', x);
     that.$el.css('top', y);
-    requestAnimationFrame(display);
+    if(that.moving) {
+      requestAnimationFrame(display);
+    }
   }
 
   requestAnimationFrame(display);
