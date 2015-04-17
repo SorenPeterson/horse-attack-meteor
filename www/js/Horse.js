@@ -11,9 +11,9 @@ Horse.prototype.render = function() {
 }
 
 Horse.prototype.styling = function() {
-  this.$el.attr('src', "img/horse_1@3x.png");
   this.$el.attr('width', window.innerWidth/10);
-  this.$el.css('position', 'absolute');
+  this.$el.attr('src', "img/horse_1@3x.png");
+  this.$el.addClass('horse-sprite');
 }
 
 Horse.prototype.bindEvents = function() {
