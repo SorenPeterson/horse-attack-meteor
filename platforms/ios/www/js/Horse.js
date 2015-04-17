@@ -20,6 +20,8 @@ Horse.prototype.bindEvents = function() {
   var that = this;
   this.$el.on('click', function() {
     that.moving = false;
+    that.$el.hide();
+    delete that;
   });
 }
 
@@ -41,6 +43,7 @@ Horse.prototype.move = function() {
     nexty = Math.random() * window.innerHeight;
 
     var display = function(timestamp) {
+      that.$el.css('left', nextx);
       that.$el.css('top', nexty);
       if(timestamp < startOfPathTimestamp + time) {
         requestAnimationFrame(display);

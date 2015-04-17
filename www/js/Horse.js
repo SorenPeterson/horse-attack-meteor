@@ -20,6 +20,8 @@ Horse.prototype.bindEvents = function() {
   var that = this;
   this.$el.on('click', function() {
     that.moving = false;
+    that.$el.hide();
+    delete that;
   });
 }
 
