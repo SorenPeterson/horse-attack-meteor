@@ -41,6 +41,7 @@ Horse.prototype.move = function() {
     nexty = Math.random() * window.innerHeight;
 
     var display = function(timestamp) {
+      that.$el.css('left', nextx);
       that.$el.css('top', nexty);
       if(timestamp < startOfPathTimestamp + time) {
         requestAnimationFrame(display);
