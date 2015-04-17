@@ -39,12 +39,16 @@ Horse.prototype.move = function() {
   var getNewLocation = function(timestamp) {
     startOfPathTimestamp = timestamp;
     var time = 1000;
+    previousx = nextx;
+    previousy = nexty;
     nextx = Math.random() * window.innerWidth;
     nexty = Math.random() * window.innerHeight;
 
     var display = function(timestamp) {
-      that.$el.css('left', nextx);
-      that.$el.css('top', nexty);
+      var x =  previousx + (timestamp - startOfPathTimestamp) / time * (nextx - previousx);
+      var y =  previousy + (timestamp - startOfPathTimestamp) / time * (nexty - previousy);
+      that.$el.css('left', Math.floor(x));
+      that.$el.css('top', Math.floor(y));
       if(timestamp < startOfPathTimestamp + time) {
         requestAnimationFrame(display);
       }
