@@ -32,25 +32,30 @@ Horse.prototype.move = function() {
   var previousx = Math.random() * window.innerWidth;
   var previousy = Math.random() * window.innerHeight;
 
-  var getNewLocation = function() {
+  var startOfPathTimestamp;
+
+  var getNewLocation = function(timestamp) {
+    startOfPathTimestamp = timestamp;
+    var time = 1000;
     nextx = Math.random() * window.innerWidth;
     nexty = Math.random() * window.innerHeight;
-    if(that.moving) {
-      setTimeout(getNewLocation, 1000);
+
+    var display = function(timestamp) {
+      that.$el.css('top', nexty);
+      if(timestamp < startOfPathTimestamp + time) {
+        requestAnimationFrame(display);
+      }
     }
+
+    if(that.moving) {
+      setTimeout(function() {
+        requestAnimationFrame(getNewLocation);
+      }, time);
+    }
+    requestAnimationFrame(display);
   }
 
-  getNewLocation();
-
-  var display = function(timestamp) {
-    that.$el.css('left', nextx);
-    that.$el.css('top', nexty);
-    if(that.moving) {
-      requestAnimationFrame(display);
-    }
-  }
-
-  requestAnimationFrame(display);
+  requestAnimationFrame(getNewLocation);
 }
 
 Horse.prototype.getLocation = function() {
