@@ -38,11 +38,15 @@ Horse.prototype.move = function() {
 
   var getNewLocation = function(timestamp) {
     startOfPathTimestamp = timestamp;
-    var time = 1000;
     previousx = nextx;
     previousy = nexty;
     nextx = Math.random() * window.innerWidth;
     nexty = Math.random() * window.innerHeight;
+    var time = Math.sqrt(
+      Math.pow(nextx - previousx, 2) +
+      Math.pow(nexty - previousy, 2)
+    );
+    time *= 4;
 
     var display = function(timestamp) {
       var x =  previousx + (timestamp - startOfPathTimestamp) / time * (nextx - previousx);
