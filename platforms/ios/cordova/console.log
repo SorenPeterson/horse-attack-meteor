@@ -1522,3 +1522,19 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-04-17 09:26:01.231 HorseAttack[69475:1261480] Resetting plugins due to page load.
 2015-04-17 09:26:01.322 HorseAttack[69475:1261480] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/1D98E325-364B-40EF-9FC5-8EAC6BFD50EA/data/Containers/Bundle/Application/62AA87E4-6B31-4207-A68F-EB8DD3BC0CD8/HorseAttack.app/www/index.html
 2015-04-17 09:26:40.128 HorseAttack[69475:1261869] Terminating since there is no system app.
+2015-04-18 00:14:56.590 HorseAttack[18647:146455] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/1D98E325-364B-40EF-9FC5-8EAC6BFD50EA/data/Containers/Data/Application/92CA91DE-9764-4115-96E4-E5DF0261CB74/Library/Cookies/Cookies.binarycookies
+2015-04-18 00:14:56.709 HorseAttack[18647:146455] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-18 00:14:56.710 HorseAttack[18647:146455] Multi-tasking -> Device: YES, App: YES
+2015-04-18 00:14:56.716 HorseAttack[18647:146455] Unlimited access to network resources
+2015-04-18 00:14:56.724 HorseAttack[18647:146455] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-18 00:14:57.149 HorseAttack[18647:146455] Resetting plugins due to page load.
+2015-04-18 00:14:57.264 HorseAttack[18647:146455] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/1D98E325-364B-40EF-9FC5-8EAC6BFD50EA/data/Containers/Bundle/Application/1F676C4A-BE63-4D51-8AEA-9187A56F0175/HorseAttack.app/www/index.html
+2015-04-18 00:16:57.806 HorseAttack[18647:146455] Resetting plugins due to page load.
+2015-04-18 00:16:57.860 HorseAttack[18647:146455] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/1D98E325-364B-40EF-9FC5-8EAC6BFD50EA/data/Containers/Bundle/Application/1F676C4A-BE63-4D51-8AEA-9187A56F0175/HorseAttack.app/www/index.html
