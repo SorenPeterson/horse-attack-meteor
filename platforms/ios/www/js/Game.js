@@ -14,11 +14,13 @@ var Game = function() {
   $("#mainCanvas").attr('height', window.innerHeight);
 
   var horsesOnScreen = 0;
+  var difficulty = 1000;
+  var rateOfDestruction = 0;
 
   stage = new createjs.Stage("mainCanvas");
   stage.on('stagemousedown', function(evt) {
-    console.log(evt);
     var child;
+    var destroyedThisPass = 0;
     for(var i = 0; i < stage.children.length; i++) {
       child = stage.children[i];
       var stageX = evt.stageX + 50;
@@ -28,8 +30,13 @@ var Game = function() {
         stage.removeChild(child);
         score += 1;
         horsesOnScreen -= 1;
+        destroyedThisPass += 1;
       }
     }
+    rateOfDestruction += destroyedThisPass;
+    setTimeout(function() {
+      rateOfDestruction -= destroyedThisPass;
+    }, 5000)
     increaseDifficulty();
     $score.text(score);
   });
@@ -41,16 +48,19 @@ var Game = function() {
     }
   }
 
-  var difficulty = 1000;
   setInterval(function() {
     if(difficulty > 10) {
       difficulty -= 1;
     }
+    console.log('debugging');
+    console.log(rateOfDestruction);
+    console.log(difficulty);
+    if(difficulty < 500 && rateOfDestruction < (1000 / difficulty)) {
+      alert('youre done');
+    }
   }, 1000);
 
   var looper = function() {
-    console.log(difficulty);
-    $(".fps").text(createjs.Ticker.getMeasuredFPS());
     horse = new Horse();
     stage.addChild(horse.bitmap);
     horsesOnScreen += 1;
