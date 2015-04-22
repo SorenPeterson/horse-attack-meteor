@@ -1,5 +1,5 @@
 var Game = function() {
-  $('.container').html($('<canvas>').attr('id', 'mainCanvas'));
+  $container.html($('<canvas>').attr('id', 'mainCanvas'));
 
   $("#mainCanvas").attr('width', window.innerWidth);
   $("#mainCanvas").attr('height', window.innerHeight);

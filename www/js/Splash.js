@@ -1,7 +1,7 @@
 var Splash = function() {
-  $('.container').html('');
-  $('.container').css('background-image', 'url(img/splash.png)');
-  $('.container').on('click', function() {
+  $container.html($('<div>').addClass('splashPage'));
+  $container.css('background-image', 'url(img/splash.png)');
+  $('.splashPage').on('click', function() {
     Game();
   })
 }
