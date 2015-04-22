@@ -1,6 +1,8 @@
 document.addEventListener('deviceready', function() {
-  $("#mainCanvas").attr('width', window.innerWidth / 2);
-  $("#mainCanvas").attr('height', window.innerHeight / 2);
+  FastClick.attach(document.body);
+
+  $("#mainCanvas").attr('width', window.innerWidth);
+  $("#mainCanvas").attr('height', window.innerHeight);
 
   var stage = new createjs.Stage("mainCanvas");
   createjs.Touch.enable(stage);
