@@ -1,5 +1,10 @@
 var Game = function() {
   $container.html($('<canvas>').attr('id', 'mainCanvas'));
+  $container.css('background-image', 'url(img/game.png)');
+
+  var score = 0;
+  $container.prepend($('<p>').addClass('score'));
+  $('.score').text(score);
 
   $("#mainCanvas").attr('width', window.innerWidth);
   $("#mainCanvas").attr('height', window.innerHeight);
@@ -13,8 +18,10 @@ var Game = function() {
       if(child.x < evt.stageX && evt.stageX < child.x + 100 &&
          child.y < evt.stageY && evt.stageY < child.y + 133) {
         stage.removeChild(child);
+        score += 1;
       }
     }
+    $('.score').text(score);
   });
   createjs.Touch.enable(stage);
 
