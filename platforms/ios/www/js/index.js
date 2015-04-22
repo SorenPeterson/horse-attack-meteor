@@ -5,7 +5,7 @@ document.addEventListener('deviceready', function() {
   $("#mainCanvas").attr('height', window.innerHeight);
 
   stage = new createjs.Stage("mainCanvas");
-  stage.on('mousedown', function(evt) {
+  stage.on('stagemousedown', function(evt) {
     console.log(evt);
     var child;
     for(var i = 0; i < stage.children.length; i++) {
