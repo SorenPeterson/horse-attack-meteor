@@ -12,5 +12,4 @@ document.addEventListener('deviceready', function() {
 
   createjs.Ticker.framerate = 30;
   createjs.Ticker.on('tick', stage);
-  console.log('hello');
 });

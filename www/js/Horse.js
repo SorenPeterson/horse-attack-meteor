@@ -9,7 +9,6 @@ Horse.prototype.bitmap = new createjs.Bitmap('img/horse_1@3x.png');
 
 Horse.prototype.move = function() {
   var that = this;
-  console.log(that);
 
   previousx = that.bitmap.x;
   previousy = that.bitmap.y;
