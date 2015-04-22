@@ -24,3 +24,8 @@
   color: white;
   font-size: 50px;
 }
+
+#mainCanvas {
+  -webkit-transform: translateZ(1.0);
+  transform: translateZ(1.0);
+}

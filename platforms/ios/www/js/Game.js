@@ -2,9 +2,13 @@ var Game = function() {
   $container.html($('<canvas>').attr('id', 'mainCanvas'));
   $container.css('background-image', 'url(img/game.png)');
 
+  $container.prepend($('<div>').addClass('score'));
+  var $score = $('.score');
   var score = 0;
-  $container.prepend($('<p>').addClass('score'));
-  $('.score').text(score);
+  $score.text(score);
+
+  $score.center();
+
 
   $("#mainCanvas").attr('width', window.innerWidth);
   $("#mainCanvas").attr('height', window.innerHeight);
@@ -21,7 +25,7 @@ var Game = function() {
         score += 1;
       }
     }
-    $('.score').text(score);
+    $score.text(score);
   });
   createjs.Touch.enable(stage);
 

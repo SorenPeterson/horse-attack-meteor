@@ -18,9 +18,6 @@
 }
 
 .score {
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
   color: white;
   font-size: 50px;
 }
