@@ -3496,3 +3496,18 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-04-22 15:03:50.965 HorseAttack[24791:331943] Resetting plugins due to page load.
 2015-04-22 15:03:51.031 HorseAttack[24791:331943] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/488AE97A-A09F-4717-8069-22D586420FC2/HorseAttack.app/www/index.html
 2015-04-22 15:05:53.220 HorseAttack[24791:331961] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-04-22 15:21:25.475 HorseAttack[24791:331961] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-04-22 15:22:26.069 HorseAttack[25402:342028] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Data/Application/4EA451C0-115D-47D3-A748-6840DA00D687/Library/Cookies/Cookies.binarycookies
+2015-04-22 15:22:26.178 HorseAttack[25402:342028] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-22 15:22:26.178 HorseAttack[25402:342028] Multi-tasking -> Device: YES, App: YES
+2015-04-22 15:22:26.180 HorseAttack[25402:342028] Unlimited access to network resources
+2015-04-22 15:22:26.215 HorseAttack[25402:342028] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-22 15:22:26.322 HorseAttack[25402:342028] Resetting plugins due to page load.
+2015-04-22 15:22:26.394 HorseAttack[25402:342028] Finished load of: file:///Users/otter/Library/Developer/CoreSimulator/Devices/3C3727C1-36BB-4DE6-8638-4AAB31C27867/data/Containers/Bundle/Application/A7159B31-B3B2-4E6F-A575-9AAE3736ABA8/HorseAttack.app/www/index.html

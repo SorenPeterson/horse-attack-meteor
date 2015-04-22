@@ -48,15 +48,13 @@ var Game = function() {
     }
   }
 
-  setInterval(function() {
+  var looping = setInterval(function() {
     if(difficulty > 10) {
       difficulty -= 1;
     }
-    console.log('debugging');
-    console.log(rateOfDestruction);
-    console.log(difficulty);
-    if(difficulty < 500 && rateOfDestruction < (1000 / difficulty)) {
-      alert('youre done');
+    if(difficulty < 500 && rateOfDestruction < (500 / difficulty)) {
+      clearInterval(looping);
+      GameOver(score);
     }
   }, 1000);
 
