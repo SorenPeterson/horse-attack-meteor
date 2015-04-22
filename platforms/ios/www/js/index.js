@@ -4,7 +4,18 @@ document.addEventListener('deviceready', function() {
   $("#mainCanvas").attr('width', window.innerWidth);
   $("#mainCanvas").attr('height', window.innerHeight);
 
-  var stage = new createjs.Stage("mainCanvas");
+  stage = new createjs.Stage("mainCanvas");
+  stage.on('mousedown', function(evt) {
+    console.log(evt);
+    var child;
+    for(var i = 0; i < stage.children.length; i++) {
+      child = stage.children[i];
+      if(child.x < evt.stageX && evt.stageX < child.x + 100 &&
+         child.y < evt.stageY && evt.stageY < child.y + 133) {
+        stage.removeChild(child);
+      }
+    }
+  });
   createjs.Touch.enable(stage);
 
   setInterval(function() {

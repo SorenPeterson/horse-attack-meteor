@@ -3,10 +3,6 @@ var Horse = function() {
   that.bitmap = that.bitmap.clone();
   that.bitmap.x = Math.random() * window.innerWidth;
   that.bitmap.y = Math.random() * window.innerHeight;
-  // that.bitmap.addEventListener('mousedown', function() {
-  //   that.bitmap.stage.removeChild(that.bitmap);
-  //   delete that;
-  // })
   that.move();
 }
 
