@@ -1,8 +1,9 @@
 document.addEventListener('deviceready', function() {
-  $("#mainCanvas").attr('width', window.innerWidth);
-  $("#mainCanvas").attr('height', window.innerHeight-4);
+  $("#mainCanvas").attr('width', window.innerWidth / 2);
+  $("#mainCanvas").attr('height', window.innerHeight / 2);
 
   var stage = new createjs.Stage("mainCanvas");
+  createjs.Touch.enable(stage);
 
   setInterval(function() {
     $(".fps").text(createjs.Ticker.getMeasuredFPS());
@@ -12,5 +13,4 @@ document.addEventListener('deviceready', function() {
 
   createjs.Ticker.framerate = 30;
   createjs.Ticker.on('tick', stage);
-  console.log('hello');
 });

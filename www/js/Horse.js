@@ -1,8 +1,14 @@
 var Horse = function() {
-  this.bitmap = this.bitmap.clone();
-  this.bitmap.x = Math.random() * window.innerWidth;
-  this.bitmap.y = Math.random() * window.innerHeight;
-  this.move();
+  var that = this;
+  that.bitmap = that.bitmap.clone();
+  that.bitmap.x = Math.random() * window.innerWidth / 2;
+  that.bitmap.y = Math.random() * window.innerHeight / 2;
+  that.bitmap.addEventListener('click', function() {
+    console.log(that);
+    console.log(that.bitmap.stage);
+    that.bitmap.stage.removeChild(that.bitmap);
+  })
+  that.move();
 }
 
 Horse.prototype.bitmap = new createjs.Bitmap('img/horse_1@3x.png');
@@ -23,7 +29,7 @@ Horse.prototype.move = function() {
   createjs.Tween.get(that.bitmap).to({
     x: nextx,
     y: nexty
-  }, time*2).call(function() {
+  }, time*10).call(function() {
     that.move()
   });
 }
