@@ -23,6 +23,7 @@ document.addEventListener('deviceready', function() {
 
   moveHorse();
 
+  createjs.Ticker.framerate = 30;
   createjs.Ticker.on('tick', stage);
   console.log('hello');
 });

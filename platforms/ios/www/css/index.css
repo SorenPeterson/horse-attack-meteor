@@ -3,3 +3,9 @@
   background-size: cover;
   background-position: right;
 }
+
+.fps {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
