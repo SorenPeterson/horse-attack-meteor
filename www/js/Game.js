@@ -17,7 +17,6 @@ var Game = function() {
 
   stage = new createjs.Stage("mainCanvas");
   stage.on('stagemousedown', function(evt) {
-    console.log(evt);
     var child;
     for(var i = 0; i < stage.children.length; i++) {
       child = stage.children[i];
@@ -49,7 +48,6 @@ var Game = function() {
   }, 1000);
 
   var looper = function() {
-    console.log(difficulty);
     $(".fps").text(createjs.Ticker.getMeasuredFPS());
     horse = new Horse();
     stage.addChild(horse.bitmap);

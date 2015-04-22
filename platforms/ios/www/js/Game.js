@@ -36,14 +36,16 @@ var Game = function() {
   createjs.Touch.enable(stage);
 
   var increaseDifficulty = function() {
-    if(horsesOnScreen < 10) {
+    if(horsesOnScreen < 10 && difficulty > 10) {
       difficulty -= 10;
     }
   }
 
   var difficulty = 1000;
   setInterval(function() {
-    difficulty -= 1;
+    if(difficulty > 10) {
+      difficulty -= 1;
+    }
   }, 1000);
 
   var looper = function() {
