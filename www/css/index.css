@@ -1,7 +1,9 @@
-.mainCanvas {
-  width: 100vw;
+.container {
   height: 100vh;
-  background-image: url('./img/splash.png');
+  width: 100vw;
+  background-image: url('../img/splash.png');
   background-size: cover;
   background-position: right;
 }
+
+
