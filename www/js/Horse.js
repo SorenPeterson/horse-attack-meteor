@@ -1,14 +1,24 @@
 var Horse = function() {
   var that = this;
-  that.bitmap = that.bitmap.clone();
+  that.bitmap = new createjs.Sprite(that.spritesheet, 'flail')
   that.bitmap.x = Math.random() * window.innerWidth;
   that.bitmap.y = Math.random() * window.innerHeight;
-  that.bitmap.regX = 50;
-  that.bitmap.regY = 66;
   that.move();
 }
 
-Horse.prototype.bitmap = new createjs.Bitmap('img/horse_1@3x.png');
+Horse.prototype.spritesheet = new createjs.SpriteSheet({
+  images: ["img/horse.png"],
+  frames: {
+    width: 100,
+    height: 133,
+    regX: 50,
+    regY: 66
+  },
+  animations: {
+    flail: [0, 5]
+  },
+  framerate: 15
+});
 
 Horse.prototype.move = function() {
   var that = this;
