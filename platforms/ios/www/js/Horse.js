@@ -3,6 +3,8 @@ var Horse = function() {
   that.bitmap = that.bitmap.clone();
   that.bitmap.x = Math.random() * window.innerWidth;
   that.bitmap.y = Math.random() * window.innerHeight;
+  that.bitmap.regX = 50;
+  that.bitmap.regY = 66;
   that.move();
 }
 
