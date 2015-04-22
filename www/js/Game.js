@@ -19,8 +19,10 @@ var Game = function() {
     var child;
     for(var i = 0; i < stage.children.length; i++) {
       child = stage.children[i];
-      if(child.x < evt.stageX && evt.stageX < child.x + 100 &&
-         child.y < evt.stageY && evt.stageY < child.y + 133) {
+      var stageX = evt.stageX + 50;
+      var stageY = evt.stageY + 66;
+      if(child.x < stageX && stageX < child.x + 100 &&
+         child.y < stageY && stageY < child.y + 133) {
         stage.removeChild(child);
         score += 1;
       }
