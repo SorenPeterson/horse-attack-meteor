@@ -1,102 +1,30 @@
 var Horse = function() {
-
-}
-
-Horse.prototype.render = function() {
-  this.$el = $(new Image());
-  this.styling();
-  this.bindEvents();
+  this.bitmap = this.bitmap.clone();
+  this.bitmap.x = Math.random() * window.innerWidth;
+  this.bitmap.y = Math.random() * window.innerHeight;
   this.move();
-  return this;
 }
 
-Horse.prototype.styling = function() {
-  this.$el.attr('width', window.innerWidth/10);
-  this.$el.attr('src', "img/horse_1@3x.png");
-  this.$el.addClass('horse-sprite');
-}
-
-Horse.prototype.bindEvents = function() {
-  var that = this;
-  this.$el.on('click', function() {
-    that.moving = false;
-    that.$el.hide();
-    delete that;
-  });
-}
+Horse.prototype.bitmap = new createjs.Bitmap('img/horse_1@3x.png');
 
 Horse.prototype.move = function() {
   var that = this;
-  that.moving = true;
+  console.log(that);
 
-  var nextx;
-  var nexty;
-  var previousx = Math.random() * window.innerWidth;
-  var previousy = Math.random() * window.innerHeight;
+  previousx = that.bitmap.x;
+  previousy = that.bitmap.y;
+  nextx = Math.random() * window.innerWidth;
+  nexty = Math.random() * window.innerHeight;
 
-  var startOfPathTimestamp;
+  var time = Math.sqrt(
+    Math.pow(nextx - previousx, 2) +
+    Math.pow(nexty - previousy, 2)
+  );
 
-  var getNewLocation = function(timestamp) {
-    startOfPathTimestamp = timestamp;
-    previousx = nextx;
-    previousy = nexty;
-    nextx = Math.random() * window.innerWidth;
-    nexty = Math.random() * window.innerHeight;
-    var time = Math.sqrt(
-      Math.pow(nextx - previousx, 2) +
-      Math.pow(nexty - previousy, 2)
-    );
-    time *= 4;
-
-    var display = function(timestamp) {
-      var x =  previousx + (timestamp - startOfPathTimestamp) / time * (nextx - previousx);
-      var y =  previousy + (timestamp - startOfPathTimestamp) / time * (nexty - previousy);
-      that.$el.css('left', Math.floor(x));
-      that.$el.css('top', Math.floor(y));
-      if(timestamp < startOfPathTimestamp + time) {
-        requestAnimationFrame(display);
-      }
-    }
-
-    if(that.moving) {
-      setTimeout(function() {
-        requestAnimationFrame(getNewLocation);
-      }, time);
-    }
-    requestAnimationFrame(display);
-  }
-
-  requestAnimationFrame(getNewLocation);
+  createjs.Tween.get(that.bitmap).to({
+    x: nextx,
+    y: nexty
+  }, time*2).call(function() {
+    that.move()
+  });
 }
-
-Horse.prototype.getLocation = function() {
-};
-
-// Horse.prototype.move = function() {
-//   var that = this;
-//   var moving = setTimeout(function() {
-//     that.moveImmediately();
-//   }, 1000);
-//   that.$el.on('click', function() {
-//     clearTimeout(moving);
-//   });
-// }
-
-// Horse.prototype.moveImmediately = function() {
-//   var that = this;
-//   var moving = setTimeout(function() {
-
-//     console.log('moving...');
-//     // something good here...
-//     that.$el.animate({
-//       left: x,
-//       top: y
-//     }, 2000);
-//     // something good here...
-
-//     that.move();
-//   }, 0);
-//   that.$el.on('click', function() {
-//     clearTimeout(moving);
-//   });
-// }
