@@ -3,7 +3,7 @@ document.addEventListener('deviceready', function() {
   $("#mainCanvas").attr('height', window.innerHeight-4);
 
   var stage = new createjs.Stage("mainCanvas");
-  var horse = new createjs.Bitmap('img/horse_1@3x.png');
+  horse = new createjs.Bitmap('img/horse_1@3x.png');
   stage.addChild(horse);
 
   var moveHorse = function() {
@@ -22,6 +22,10 @@ document.addEventListener('deviceready', function() {
   }
 
   moveHorse();
+
+  setInterval(function() {
+    $(".fps").text(createjs.Ticker.getMeasuredFPS());
+  }, 1000);
 
   createjs.Ticker.framerate = 30;
   createjs.Ticker.on('tick', stage);
