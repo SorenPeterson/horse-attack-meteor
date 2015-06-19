@@ -69,3 +69,4 @@ var Game = function() {
   createjs.Ticker.framerate = 30;
   createjs.Ticker.on('tick', stage);
 }
+
