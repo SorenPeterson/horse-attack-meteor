@@ -5,9 +5,15 @@
 <body>
 </body>
 
+<template name="Layout">
+	{{> yield}}
+</template>
+
 <template name="Splash">
-	<div class="splashPage">
-	</div>
+	<a href="/game">
+		<div class="splashPage">
+		</div>
+	</a>
 </template>
 
 <template name="Game">

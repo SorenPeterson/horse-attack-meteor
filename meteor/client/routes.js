@@ -1,3 +1,8 @@
+Router.onBeforeAction(function() {
+	this.layout('Layout');
+	this.next();
+});
+
 Router.route('/', function() {
 	this.redirect('/splash');
 });
@@ -13,3 +18,4 @@ Router.route('/game', function() {
 Router.route('/gameover', function() {
 	this.render('GameOver');
 });
+
