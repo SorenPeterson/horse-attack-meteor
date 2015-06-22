@@ -42,31 +42,31 @@ var Game = function() {
   });
   createjs.Touch.enable(stage);
 
-  var increaseDifficulty = function() {
-    if(horsesOnScreen < 10 && difficulty > 10) {
+  var increasedifficulty = function() {
+    if(horsesonscreen < 10 && difficulty > 10) {
       difficulty -= 10;
     }
   }
 
-  var looping = setInterval(function() {
+  var looping = setinterval(function() {
     if(difficulty > 10) {
       difficulty -= 1;
     }
-    if(difficulty < 500 && rateOfDestruction < (500 / difficulty)) {
-      clearInterval(looping);
-      GameOver(score);
+    if(difficulty < 500 && rateofdestruction < (500 / difficulty)) {
+      clearinterval(looping);
+      gameover(score);
     }
   }, 1000);
 
   var looper = function() {
-    horse = new Horse();
-    stage.addChild(horse.bitmap);
-    horsesOnScreen += 1;
-    setTimeout(looper, difficulty);
+    horse = new horse();
+    stage.addchild(horse.bitmap);
+    horsesonscreen += 1;
+    settimeout(looper, difficulty);
   }
   looper();
 
-  createjs.Ticker.framerate = 30;
-  createjs.Ticker.on('tick', stage);
+  createjs.ticker.framerate = 30;
+  createjs.ticker.on('tick', stage);
 }
 

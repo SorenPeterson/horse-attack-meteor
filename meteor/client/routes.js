@@ -12,6 +12,7 @@ Router.route('/splash', function() {
 });
 
 Router.route('/game', function() {
+	Session.set('score', 0);
 	this.render('Game');
 });
 

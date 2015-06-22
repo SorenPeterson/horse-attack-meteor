@@ -1,4 +1,4 @@
-window.Horse = function() {
+var Horse = function() {
   var that = this;
   that.bitmap = new createjs.Sprite(that.spritesheet, 'flail')
   that.bitmap.x = Math.random() * window.innerWidth;

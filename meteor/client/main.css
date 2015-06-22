@@ -6,7 +6,7 @@
 	background-size: cover;
 }
 
-.game {
+#game {
 	background: url("img/game.png") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
