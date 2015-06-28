@@ -10,3 +10,4 @@ insecure
 iron:router
 ccorcos:transitioner
 percolate:velocityjs
+sorenpeterson:createjs
