@@ -11,3 +11,4 @@ iron:router
 ccorcos:transitioner
 percolate:velocityjs
 sorenpeterson:createjs
+waitingkuo:normalize
