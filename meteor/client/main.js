@@ -1,3 +1,7 @@
+Meteor.startup(function() {
+	Session.set('score', 0);
+});
+
 Template.Game.onRendered(function() {
 	var canvas = document.getElementById('canvas');
 	canvas.height = window.innerHeight;
@@ -16,8 +20,8 @@ Template.Game.onRendered(function() {
 		}
 		_.each(stage.children.reverse(), function(child) {
 			var result = hitTest(e.stageX, e.stageY, child);
-			console.log(result);
 			if(result) {
+				Session.set('score', Session.get('score') + 1);
 				stage.removeChild(child);
 			}
 		});
@@ -29,7 +33,7 @@ Template.Game.onRendered(function() {
 	// Add a horse every second
 	setInterval(function() {
 		stage.addChild(getNewHorse());
-	}, 1000);
+	}, 100);
 });
 
 var getNewHorse;

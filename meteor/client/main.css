@@ -14,6 +14,17 @@
 
 #game {
 	background-image: url("/img/game.png");
+	position: fixed;
+}
+
+.score {
+	position: fixed;
+	width: 100vw;
+	left: 0;
+	top: 40vh;
+	color: white;
+	font-size: 20vh;
+	text-align: center;
 }
 
 canvas {
