@@ -5,7 +5,6 @@ Template.Game.onRendered(function() {
 	var stage = new createjs.Stage(canvas);
 	createjs.Ticker.addEventListener("tick", handleTick);
 	function handleTick(e) {
-		console.log('hi');
 		stage.update();
 	}
 	setTimeout(function() {
@@ -17,16 +16,28 @@ var getNewHorse;
 (function() {
 	var data = {
 		images: ["/img/horse.png"],
-		frames: {width: 100, height: 133, count: 6},
+		frames: {width: 100, height: 133, count: 6, regX: 50, regY: 66},
 		animations: {
 			flail: {
-				frames: [0, 1, 2, 3, 4, 5]
+				frames: [0, 1, 2, 3, 4, 5],
+				speed: 0.5
 			}
 		}
 	}
 	var spriteSheet = new createjs.SpriteSheet(data);
+	var moveHorse = function(horse) {
+		var x = Math.random() * window.innerWidth;
+		var y = Math.random() * window.innerHeight;
+
+		var deltax = x - horse.x;
+		var deltay = y - horse.y;
+		var distance = Math.sqrt((deltax*deltax) + (deltay*deltay));
+
+		createjs.Tween.get(horse).to({x: x, y: y}, distance * 6).call(moveHorse, [horse]);
+	}
 	getNewHorse = function() {
 		var horse = new createjs.Sprite(spriteSheet, 'flail');
+		moveHorse(horse);
 		return horse;
 	}
 })();
