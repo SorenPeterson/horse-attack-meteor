@@ -45,18 +45,26 @@ var getNewHorse;
 		}
 	}
 	var spriteSheet = new createjs.SpriteSheet(data);
+	var randomCoord = function() {
+		return {
+			x: Math.random() * window.innerWidth,
+			y: Math.random() * window.innerHeight
+		}
+	}
 	var moveHorse = function(horse) {
-		var x = Math.random() * window.innerWidth;
-		var y = Math.random() * window.innerHeight;
+		var coords = randomCoord();
 
-		var deltax = x - horse.x;
-		var deltay = y - horse.y;
+		var deltax = coords.x - horse.x;
+		var deltay = coords.y - horse.y;
 		var distance = Math.sqrt((deltax*deltax) + (deltay*deltay));
 
-		createjs.Tween.get(horse).to({x: x, y: y}, distance * 6).call(moveHorse, [horse]);
+		createjs.Tween.get(horse).to({x: coords.x, y: coords.y}, distance * 6).call(moveHorse, [horse]);
 	}
 	getNewHorse = function() {
 		var horse = new createjs.Sprite(spriteSheet, 'flail');
+		var coords = randomCoord();
+		horse.x = coords.x;
+		horse.y = coords.y;
 		moveHorse(horse);
 		return horse;
 	}
