@@ -3,10 +3,30 @@ Template.Game.onRendered(function() {
 	canvas.height = window.innerHeight;
 	canvas.width = window.innerWidth;
 	var stage = new createjs.Stage(canvas);
+	createjs.Touch.enable(stage);
+	stage.on('stagemousedown', function(e) {
+		var hitTest = function(x, y, child) {
+			if(x < child.x + 50 &&
+			   x > child.x - 50 &&
+			   y < child.y + 66 &&
+			   y > child.y - 66) {
+				return true;
+			}
+			return false;
+		}
+		_.each(stage.children.reverse(), function(child) {
+			var result = hitTest(e.stageX, e.stageY, child);
+			console.log(result);
+			if(result) {
+				stage.removeChild(child);
+			}
+		});
+	});
 	createjs.Ticker.addEventListener("tick", handleTick);
 	function handleTick(e) {
 		stage.update();
 	}
+	// Add a horse every second
 	setInterval(function() {
 		stage.addChild(getNewHorse());
 	}, 1000);
