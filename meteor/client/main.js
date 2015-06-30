@@ -7,7 +7,7 @@ Template.Game.onRendered(function() {
 	function handleTick(e) {
 		stage.update();
 	}
-	setTimeout(function() {
+	setInterval(function() {
 		stage.addChild(getNewHorse());
 	}, 1000);
 });
