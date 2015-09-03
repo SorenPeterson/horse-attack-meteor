@@ -17,6 +17,10 @@
 	position: fixed;
 }
 
+#gameover {
+	background-image: url("/img/gameover.png");
+}
+
 .score {
 	position: fixed;
 	width: 100vw;

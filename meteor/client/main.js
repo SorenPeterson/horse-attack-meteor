@@ -2,6 +2,8 @@ Meteor.startup(function() {
 	Session.set('score', 0);
 });
 
+var horsesOnScreen = new ReactiveVar(0);
+
 Template.Game.onRendered(function() {
 	var canvas = document.getElementById('canvas');
 	canvas.height = window.innerHeight;
@@ -22,6 +24,7 @@ Template.Game.onRendered(function() {
 			var result = hitTest(e.stageX, e.stageY, child);
 			if(result) {
 				Session.set('score', Session.get('score') + 1);
+				horsesOnScreen -= 1;
 				stage.removeChild(child);
 			}
 		});
@@ -32,6 +35,7 @@ Template.Game.onRendered(function() {
 	}
 	// Add a horse every second
 	setInterval(function() {
+		horsesOnScreen += 1;
 		stage.addChild(getNewHorse());
 	}, 100);
 });
