@@ -37,6 +37,11 @@ Template.Game.onRendered(function() {
 	setInterval(function() {
 		horsesOnScreen += 1;
 		stage.addChild(getNewHorse());
+		console.log('horse', horsesOnScreen);
+		if(horsesOnScreen > 100) {
+			window.location.replace('/gameover');
+			console.log('hello');
+		}
 	}, 100);
 });
 
