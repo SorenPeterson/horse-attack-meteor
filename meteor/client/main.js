@@ -35,14 +35,15 @@ Template.Game.onRendered(function() {
 	}
 	// Add a horse every second
 	setInterval(function() {
-		horsesOnScreen += 1;
+		horsesOnScreen.set(horsesOnScreen.get() + 1);
 		stage.addChild(getNewHorse());
-		console.log('horse', horsesOnScreen);
-		if(horsesOnScreen > 100) {
-			window.location.replace('/gameover');
-			console.log('hello');
-		}
 	}, 100);
+});
+
+Tracker.autorun(function() {
+	if(horsesOnScreen.get() > 100) {
+		window.location.replace('/gameover');
+	}
 });
 
 var getNewHorse;
