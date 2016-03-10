@@ -4,3 +4,9 @@ Template.Splash.events({
 	}
 });
 
+Template.GameOver.events({
+	'click #gameover': function() {
+		window.location.replace('/gameover');
+	}
+});
+
